@@ -1,0 +1,37 @@
+{
+  "name": "accounts-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "encore run",
+    "encore:run": "encore run",
+    "run:encore:ps": "powershell -ExecutionPolicy Bypass -File ./scripts/run-encore.ps1",
+    "run:encore:sh": "./scripts/run-encore.sh",
+    "dev:graphql": "tsx src/graphql/server.ts",
+    "apply:views": "node scripts/apply_views.js",
+    "drizzle:generate": "drizzle-kit generate --config ./src/drizzle/drizzle.config.ts",
+    "drizzle:migrate": "drizzle-kit migrate --config ./src/drizzle/drizzle.config.ts",
+    "drizzle:push": "drizzle-kit push --config ./src/drizzle/drizzle.config.ts",
+    "drizzle:studio": "drizzle-kit studio --config ./src/drizzle/drizzle.config.ts",
+    "migrate:app": "tsx scripts/run-migrations.ts"
+  },
+  "dependencies": {
+    "@apollo/server": "^5.0.0",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.44.5",
+    "encore.dev": "^1.52.1",
+    "graphql": "^16.11.0",
+    "graphql-http": "^1.22.0",
+    "pg": "^8.16.3",
+    "zod": "^4.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.7",
+    "@types/pg": "^8.15.5",
+    "drizzle-kit": "^0.31.4",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.16.2",
+    "typescript": "^5.2.2"
+  }
+}

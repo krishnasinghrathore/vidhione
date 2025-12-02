@@ -1,0 +1,39 @@
+{
+  "name": "interlogiq-backend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "InterLogIQ backend: Encore.ts + Apollo GraphQL + Drizzle ORM (PostgreSQL)",
+  "license": "MPL-2.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "encore:run": "encore run",
+    "drizzle:generate": "drizzle-kit generate --config ./src/drizzle/drizzle.config.ts",
+    "drizzle:migrate": "drizzle-kit migrate --config ./src/drizzle/drizzle.config.ts",
+    "drizzle:push": "drizzle-kit push --config ./src/drizzle/drizzle.config.ts",
+    "drizzle:studio": "drizzle-kit studio --config ./src/drizzle/drizzle.config.ts",
+    "migrate:app": "tsx src/drizzle/run-migrations.ts"
+  },
+  "dependencies": {
+    "@apollo/server": "^5.0.0",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.44.5",
+    "encore.dev": "^1.49.3",
+    "graphql": "^16.11.0",
+    "pg": "^8.16.3",
+    "zod": "^4.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.7",
+    "@types/pg": "^8.15.5",
+    "drizzle-kit": "^0.31.4",
+    "tsx": "^4.16.2",
+    "typescript": "^5.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+    "strict": false,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "baseUrl": ".",
+    "typeRoots": ["../../node_modules/@types", "./node_modules/@types"],
+    "types": ["vite/client", "react", "react-dom"],
+    "paths": {
+      "@/*": ["src/*"],
+      "@/types/*": ["src/types/*"],
+      "react": ["../../node_modules/react"],
+      "react-dom": ["../../node_modules/react-dom"],
+      "react-dom/*": ["../../node_modules/react-dom/*"],
+      "react-router-dom": ["../../node_modules/react-router-dom"],
+      "react-helmet-async": ["../../node_modules/react-helmet-async"],
+      "@apollo/client": ["../../node_modules/@apollo/client"],
+      "@apollo/client/*": ["../../node_modules/@apollo/client/*"],
+      "primereact/*": ["../../node_modules/primereact/*"],
+      "primeicons/primeicons.css": ["../../node_modules/primeicons/primeicons.css"],
+      "primeflex/primeflex.css": ["../../node_modules/primeflex/primeflex.css"],
+      "chart.js": ["../../node_modules/chart.js"],
+      "@fullcalendar/*": ["../../node_modules/@fullcalendar/*"],
+      "zod": ["../../node_modules/zod"]
+    }
+  },
+  "include": ["src", "src/**/*.d.ts"],
+  "exclude": ["dist", "node_modules"]
+}

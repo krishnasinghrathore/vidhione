@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.base.json",
+  "include": ["src"],
+  "compilerOptions": {
+    "types": ["vite/client"],
+    "baseUrl": "src",
+    "paths": {
+      "@/layout/*": ["layout/*"],
+      "@/demo/*": ["demo/*"],
+      "@/types/*": ["types/*"],
+      "@vidhione/theme/*": ["../../../packages/theme/src/*"],
+      "@vidhione/theme": ["../../../packages/theme/src"]
+    }
+  }
+}

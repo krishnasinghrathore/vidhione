@@ -1,0 +1,13 @@
+/* Shared Vidhione Theme entry
+    - Uses InterLogIQ theme from reference project
+    - Apps can just import '@theme/index.scss'
+ */
+
+/* Import theme variables using @use with global namespace */
+@use "./theme/theme-light/indigo/theme.scss" as *;
+
+/* Layout styles (structure, typography, menus, etc.) */
+@use "./layout/layout" as *;
+
+/* Optional: preloading */
+@import "./layout/layout/preloading.css";

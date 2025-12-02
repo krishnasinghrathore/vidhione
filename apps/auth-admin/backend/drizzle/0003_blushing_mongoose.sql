@@ -1,0 +1,1 @@
+ALTER TABLE "logiq"."work_orders" ADD COLUMN IF NOT EXISTS "notes" text;
